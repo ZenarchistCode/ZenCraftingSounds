@@ -14,7 +14,7 @@ This mod must be installed on both the server & client.
 
 Credits:
 
-All of these sounds are free-to-use creative commons sounds taht require no attribution, and a couple I recorded myself. I had to listen to an ungodly amount of ASMR sound videos to get most of these effects. I will never be the same again.
+All of these sounds are free-to-use creative commons sounds that require no attribution, and a couple I recorded myself. I had to listen to an ungodly amount of ASMR sound videos to get most of these effects. I will never be the same again.
 
 Repack & Source Code:
 

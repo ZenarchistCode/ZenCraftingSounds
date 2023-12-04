@@ -20,6 +20,10 @@ modded class RecipeBase
 				return;
 			case "DisinfectantAlcohol":
 			case "IodineTincture":
+			case "Syringe":
+			case "SyringeEmpty":
+			case "SyringeFull":
+			case "SyberiaMedicineAmpoule":
 				InsertIngredientEx(index, ingredient, "Zen_DisinfectBottle");
 				return;
 			case "DisinfectantSpray":
@@ -50,7 +54,7 @@ modded class RecipeBase
 			case "Flag_Base":
 			case "Armband_ColorBase":
 			case "Raincoat_ColorBase":
-				InsertIngredientEx(index, ingredient, "Zen_CraftRag");
+				InsertIngredientEx(index, ingredient, "Rags_craft");
 				return;
 			case "ElectronicRepairKit":
 				InsertIngredientEx(index, ingredient, "Zen_ElectronicRepair");

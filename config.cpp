@@ -66,11 +66,11 @@ class CfgVehicles
 					soundLookupTable="openBeanCan_loop_LookupTable";
 					id=4206904;
 				};
-				class Zen_CraftRag_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206905;
-				};
+				//class Zen_CraftRags_loop
+				//{
+				//	soundLookupTable="openBeanCan_loop_LookupTable";
+				//	id=4206905;
+				//};
 				class Zen_DuctTape_loop
 				{
 					soundLookupTable="openBeanCan_loop_LookupTable";
@@ -171,6 +171,11 @@ class CfgVehicles
 					soundLookupTable="openBeanCan_loop_LookupTable";
 					id=4206925;
 				};
+				class Zen_DigWorms_loop
+				{
+					soundLookupTable="openBeanCan_loop_LookupTable";
+					id=4206926;
+				};
 			};
 		};
 	};
@@ -191,7 +196,7 @@ class CfgSoundShaders
 			{ "ZenCraftingSounds\data\sounds\SharpenMelee\SharpenMelee_loop5", 1 },
 			{ "ZenCraftingSounds\data\sounds\SharpenMelee\SharpenMelee_loop6", 1 }
 		};
-		volume=0.3;
+		volume=0.5;
 	};
 	// Weapon Cleaning Kit
 	class Zen_CleanWeapon_loop_Soundshader: baseCharacter_SoundShader
@@ -214,7 +219,7 @@ class CfgSoundShaders
 		{
 			{ "ZenCraftingSounds\data\sounds\DisinfectBottle\DisinfectBottle_loop1", 1 }
 		};
-		volume=0.5;
+		volume=1.0;
 	};
 	// Disinfectant spray
 	class Zen_DisinfectSpray_loop_Soundshader: baseCharacter_SoundShader
@@ -226,20 +231,6 @@ class CfgSoundShaders
 			{ "ZenCraftingSounds\data\sounds\DisinfectSpray\DisinfectSpray_loop3", 1 }
 		};
 		volume=0.2;
-	};
-	// Rags
-	class Zen_CraftRag_loop_Soundshader: baseCharacter_SoundShader
-	{
-		samples[]=
-		{
-			{ "ZenCraftingSounds\data\sounds\CraftRag\CraftRag_loop1", 1 },
-			{ "ZenCraftingSounds\data\sounds\CraftRag\CraftRag_loop2", 1 },
-			{ "ZenCraftingSounds\data\sounds\CraftRag\CraftRag_loop3", 1 },
-			{ "ZenCraftingSounds\data\sounds\CraftRag\CraftRag_loop4", 1 },
-			{ "ZenCraftingSounds\data\sounds\CraftRag\CraftRag_loop5", 1 },
-			{ "ZenCraftingSounds\data\sounds\CraftRag\CraftRag_loop6", 1 }
-		};
-		volume=0.1;
 	};
 	// Duct tape
 	class Zen_DuctTape_loop_Soundshader: baseCharacter_SoundShader
@@ -459,11 +450,20 @@ class CfgSoundShaders
 	{
 		samples[]=
 		{
-			{ "ZenCraftingSounds\data\sounds\Paper\Paper1", 1 },
-			{ "ZenCraftingSounds\data\sounds\Paper\Paper2", 1 },
-			{ "ZenCraftingSounds\data\sounds\Paper\Paper3", 1 }
+			{ "DZ\sounds\Characters\actions\items\note\noteIn_1", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteIn_2", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteIn_3", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteIn_4", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteIn_5", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteIn_6", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteOut_1", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteOut_2", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteOut_3", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteOut_4", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteOut_5", 1 },
+			{ "DZ\sounds\Characters\actions\items\note\noteOut_6", 1 }
 		};
-		volume=1.0;
+		volume=0.17782794;
 	};
 	// Pain male
 	class Zen_PainMale_loop_Soundshader: baseCharacter_SoundShader
@@ -481,7 +481,7 @@ class CfgSoundShaders
 		};
 		volume="0.5 * (male factor[(1-0.2),(1-0.1)]) * (male factor[(0.2+1),(0.1+1)])";
 	};
-	// Paper
+	// Pain female
 	class Zen_PainFemale_loop_Soundshader: baseCharacter_SoundShader
 	{
 		samples[]=
@@ -562,10 +562,6 @@ class CfgSoundSets
 	class Zen_DisinfectSpray_loop_SoundSet: baseCharacter_SoundSet
 	{
 		soundShaders[]= { "Zen_DisinfectSpray_loop_Soundshader" };
-	};
-	class Zen_CraftRag_loop_SoundSet: baseCharacter_SoundSet
-	{
-		soundShaders[]= { "Zen_CraftRag_loop_Soundshader" };
 	};
 	class Zen_DuctTape_loop_SoundSet: baseCharacter_SoundSet
 	{
@@ -697,11 +693,6 @@ class CfgSoundTables
 			{
 				category="Zen_DisinfectSpray";
 				soundSets[]= { "Zen_DisinfectSpray_loop_SoundSet" };
-			};
-			class Zen_CraftRag_loop
-			{
-				category="Zen_CraftRag";
-				soundSets[]= { "Zen_CraftRag_loop_SoundSet" };
 			};
 			class Zen_DuctTape_loop
 			{
