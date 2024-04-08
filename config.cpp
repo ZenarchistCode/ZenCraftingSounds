@@ -37,150 +37,6 @@ class CfgMods
 	};
 };
 
-class CfgVehicles
-{
-	class Man;
-	class SurvivorBase: Man
-	{
-		class AnimEvents
-		{
-			class SoundWeapon
-			{
-				class Zen_SharpenMelee_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206901; // Not sure what this is for, but I made it a weird number to avoid potential problems with other mods/vanilla updates
-				};
-				class Zen_CleanWeapon_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206902;
-				};
-				class Zen_DisinfectBottle_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206903;
-				};
-				class Zen_DisinfectSpray_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206904;
-				};
-				//class Zen_CraftRags_loop
-				//{
-				//	soundLookupTable="openBeanCan_loop_LookupTable";
-				//	id=4206905;
-				//};
-				class Zen_DuctTape_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206906;
-				};
-				class Zen_BreakStick_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206907;
-				};
-				class Zen_BreakWaterBottle_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206908;
-				};
-				class Zen_CraftBolts_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206909;
-				};
-				class Zen_SprayPaint_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206910;
-				};
-				class Zen_SewingKit_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206911;
-				};
-				class Zen_LeatherSewingKit_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206912;
-				};
-				class Zen_Rubber_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206913;
-				};
-				class Zen_SawWood_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206914;
-				};
-				class Zen_BreakStone_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206915;
-				};
-				class Zen_ElectronicRepair_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206916;
-				};
-				class Zen_Bones_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206917;
-				};
-				class Zen_MetalWire_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206918;
-				};
-				class Zen_BloodTest_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206919;
-				};
-				class Zen_Rocks_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206920;
-				};
-				class Zen_Nails_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206921;
-				};
-				class Zen_Wood_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206922;
-				};
-				class Zen_Paper_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206923;
-				};
-				class Zen_PainMale_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206924;
-				};
-				class Zen_PainFemale_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206925;
-				};
-				class Zen_DigWorms_loop
-				{
-					soundLookupTable="openBeanCan_loop_LookupTable";
-					id=4206926;
-				};
-			};
-		};
-	};
-};
-
 class CfgSoundShaders
 {
 	class baseCharacter_SoundShader;
@@ -231,6 +87,22 @@ class CfgSoundShaders
 			{ "ZenCraftingSounds\data\sounds\DisinfectSpray\DisinfectSpray_loop3", 1 }
 		};
 		volume=0.2;
+	};
+	// Hands in the bush
+	class Zen_HandsBush_loop_Soundshader: baseCharacter_SoundShader
+	{
+		samples[]=
+		{
+			{ "\DZ\sounds\Characters\movement\vegetation\bush_walk_1", 1 },
+			{ "\DZ\sounds\Characters\movement\vegetation\bush_walk_2", 1 },
+			{ "\DZ\sounds\Characters\movement\vegetation\bush_walk_3", 1 },
+			{ "\DZ\sounds\Characters\movement\vegetation\bush_walk_4", 1 },
+			{ "\DZ\sounds\Characters\movement\vegetation\bush_walk_5", 1 },
+			{ "\DZ\sounds\Characters\movement\vegetation\bush_walk_6", 1 },
+			{ "\DZ\sounds\Characters\movement\vegetation\bush_walk_7", 1 },
+			{ "\DZ\sounds\Characters\movement\vegetation\bush_walk_8", 1 }
+		};
+		volume=0.3;
 	};
 	// Duct tape
 	class Zen_DuctTape_loop_Soundshader: baseCharacter_SoundShader
@@ -563,6 +435,10 @@ class CfgSoundSets
 	{
 		soundShaders[]= { "Zen_DisinfectSpray_loop_Soundshader" };
 	};
+	class Zen_HandsBush_loop_SoundSet: baseCharacter_SoundSet
+	{
+		soundShaders[]= { "Zen_HandsBush_loop_Soundshader" };
+	};
 	class Zen_DuctTape_loop_SoundSet: baseCharacter_SoundSet
 	{
 		soundShaders[]= { "Zen_DuctTape_loop_Soundshader" };
@@ -672,7 +548,7 @@ class CfgSoundTables
 {
 	class CfgActionsSoundTables
 	{
-		class openBeanCan_loop_LookupTable
+		class Craft_LookupTable
 		{
 			class Zen_SharpenMelee_loop
 			{
@@ -693,6 +569,11 @@ class CfgSoundTables
 			{
 				category="Zen_DisinfectSpray";
 				soundSets[]= { "Zen_DisinfectSpray_loop_SoundSet" };
+			};
+			class Zen_HandsBush_loop
+			{
+				category="Zen_HandsBush";
+				soundSets[]= { "Zen_HandsBush_loop_SoundSet" };
 			};
 			class Zen_DuctTape_loop
 			{
